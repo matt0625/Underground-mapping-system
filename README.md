@@ -20,7 +20,7 @@ This project served as a major learning milestone in my software engineering jou
 
 * **Model-View-Controller (MVC) Reflection**: While TubeTrekker is fully functional, looking back, the architecture lacks strict separation between the logic and the UI. If I were to build this again, I would implement a robust MVC or MVVM pattern to improve testability and code reuse. I have since applied this lesson to my subsequent **Wordle** project, where I prioritized a clean MVC split from day one.
 * **Asynchronous Processing**: To ensure a smooth user experience, I utilized multi-threading to handle resource-intensive tasks, such as loading map tile layers and fetching live API data, without blocking the main UI thread.
-* **Data Persistence**: I used **SQLite** to manage user accounts and local storage for journey history, ensuring data remains persistent across sessions.
+* **Data Persistence**: I used **SQLite** to manage user accounts and local storage for journey history, ensuring data remains persistent across sessions. In future, I would place greater emphasis on database design, ensuring normalisation by eliminating non-key dependencies and designing tables such that there are no direct many-to-many relationships.
 * **Testing and Evaluation**: The project underwent rigorous user testing, including recorded interviews to validate that the pathfinding and fare calculation met real-world user needs.
 
 ## Key Features
