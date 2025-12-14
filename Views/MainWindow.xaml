@@ -1,0 +1,93 @@
+﻿<Window x:Class="TUBETREKWPFV1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TUBETREKWPFV1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
+    <!-- tailored grid row and column definitions for contents of this window --> 
+    <Grid Background="#f4f4f4" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- see Recent Journeys button -->
+        <Button Name="RecentJourneysButton" Content="See Recent Journeys"
+                Grid.Row="0"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,10,0,0" Padding="5,2"
+                Background="#2d89ef" Foreground="White"
+                FontFamily="Segoe UI" FontSize="12" FontWeight="Bold"
+                BorderThickness="0"
+                Click="RecentJourneysButton_Click" Height="37" Width="149">
+            <!-- hover effect for ease of use -->
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" Opacity="0.3"/>
+            </Button.Effect>
+        </Button>
+
+        <!--log out button, same hover effect -->
+        <Button Name="LogOutButton" Content="Log Out" Width="50" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" Foreground="#2d89ef" 
+         FontSize="12" BorderBrush="#2d89ef" BorderThickness="1" Click="LogOutButton_Click" Grid.Row="0" Grid.Column="1" Margin="0,10,20,0">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.3"/>
+            </Button.Effect>
+        </Button>
+
+
+        <!-- header -->
+        <Label Content="TubeTrekker" 
+               FontFamily="Segoe UI" FontSize="48" FontWeight="Bold"
+               Foreground="#2d89ef" HorizontalAlignment="Center" 
+               Grid.Row="0" Grid.ColumnSpan="2"
+               Margin="0,10,0,20" />
+
+        <!-- Starting Station -->
+        <Label Content="Enter Starting Station:" 
+               FontFamily="Segoe UI" FontSize="14" FontWeight="SemiBold"
+               Foreground="#333" Grid.Row="1" Grid.Column="0" 
+               VerticalAlignment="Center" Margin="10,0" />
+        <TextBox Name="StartingBox"
+                 Grid.Row="1" Grid.Column="1"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                 Margin="10,10,20,10" Padding="10"
+                 BorderBrush="#ccc" BorderThickness="1"
+                 Background="White" Foreground="#333" />
+
+        <!-- Destination -->
+        <Label Content="Enter Destination:" 
+               FontFamily="Segoe UI" FontSize="14" FontWeight="SemiBold"
+               Foreground="#333" Grid.Row="2" Grid.Column="0"
+               VerticalAlignment="Center" Margin="10,0" />
+        <TextBox Name="DestinationBox" 
+                 Grid.Row="2" Grid.Column="1"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                 Margin="10,10,20,10" Padding="10"
+                 BorderBrush="#ccc" BorderThickness="1"
+                 Background="White" Foreground="#333" />
+
+        <!-- Find Journey Button, same hover effect -->
+        <Button Name="JourneyFinder" Content="Find Journey" 
+                Grid.Row="4" Grid.ColumnSpan="2"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Margin="20,10,20,20" Padding="10,5"
+                Background="#2d89ef" Foreground="White" 
+                FontFamily="Segoe UI" FontSize="16" FontWeight="Bold"
+                BorderThickness="0" Width="200"
+                 Click="JourneyFinder_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" Opacity="0.3"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+
+</Window>

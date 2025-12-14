@@ -1,0 +1,86 @@
+﻿<Window x:Class="TUBETREKWPFV1.Views.SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TUBETREKWPFV1.Views"
+        mc:Ignorable="d"
+        Title="SignUpWindow" Height="650" Width="800" WindowState="Maximized">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- For the SignUp Title -->
+            <RowDefinition Height="Auto"/>
+            <!-- For Username -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- For Password -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- For Confirm Password -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- For the SignUp Button -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- SignUp Title -->
+        <TextBlock Text="TubeTrekker Sign Up" FontSize="38" FontWeight="Bold" Foreground="#2d89ef" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"  Margin="0,30,0,20"/>
+
+        <Image Source="pack://application:,,,/Resources/Images/londonunderground.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="400" MaxHeight="200" Margin="41,0,619,0" Grid.Row="0" />
+
+        <!-- Username Label and Question Mark Button -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="1">
+            <TextBlock Text="Username:" FontSize="16" Foreground="DarkSlateGray" VerticalAlignment="Center" Margin="0,0,200,0"/>
+            <Button Name="UsernameDetailsButton" Click="UsernameDetailsButton_Click" Padding="0" Background="Transparent" BorderThickness="0" VerticalAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.3"/>
+                </Button.Effect>
+                <Image Source="pack://application:,,,/Resources/Images/questionmark.png" SnapsToDevicePixels="True" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Height="20" Width="20"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Username Field -->
+        <TextBox x:Name="UsernameTextBox" Width="300" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" Margin="50,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Padding="10,5"
+                 Background="White" Foreground="DarkSlateGray" BorderBrush="#2d89ef" BorderThickness="1" Grid.Row="2"/>
+
+        <!-- Password Label -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="3">
+            <TextBlock Text="Password:" FontSize="16" Foreground="DarkSlateGray" VerticalAlignment="Center" Margin="0,0,200,0"/>
+            <Button  Name="PasswordDetailsButton" Click="PasswordDetailsButton_Click" Padding="0" Background="Transparent" BorderThickness="0" VerticalAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.3"/>
+                </Button.Effect>
+                <Image Source="pack://application:,,,/Resources/Images/questionmark.png" SnapsToDevicePixels="True" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Height="20" Width="20"/>
+            </Button>
+        </StackPanel>
+        <!-- Password Field -->
+        <TextBox x:Name="PasswordBox" Width="300"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" Margin="50,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Padding="10,5"
+                     Background="White" Foreground="DarkSlateGray" BorderBrush="#2d89ef" BorderThickness="1" Grid.Row="4" />
+
+        <!-- Confirm Password Label -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,160,0" Grid.Row="5">
+            <TextBlock Text="Confirm Password:" FontSize="16" Foreground="DarkSlateGray" Grid.Row="5"/>
+        </StackPanel>
+        <!-- Confirm Password Field -->
+        <TextBox x:Name="ConfirmPassword"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="300" Height="40" Margin="50,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Padding="10,5"
+                     Background="White" Foreground="DarkSlateGray" BorderBrush="#2d89ef" BorderThickness="1" Grid.Row="6" />
+
+        <!-- Sign Up Button -->
+        <Button Name="SignUpButton" Content="Sign Up" Width="300" Height="45" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#2d89ef" Foreground="White" 
+                FontSize="16" BorderBrush="#2d89ef" BorderThickness="1" Margin="50,20,50,30" Grid.Row="7" Click="SignUpButton_Click">
+            
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.3"/>
+            </Button.Effect>
+        </Button>
+
+        <!--Return to Login Button -->
+        <Button Name="ReturnToLogin" Content="Return to Login" Width="200" Height="45" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="#2d89ef" 
+         FontSize="14" BorderBrush="#2d89ef" BorderThickness="1" Grid.Row="8" Click="ReturnToLogin_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.3"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>   
